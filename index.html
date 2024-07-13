@@ -4,20 +4,27 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>My Portfolio</title>
   </head>
   <body>
     <!--Naigation Bar and Label-->
     <header>
-
+      
       <!--LABEL-->
       <div id="Top-bar">
-        <label id="label">Portfolio.</label>
+        <label id="label">Portfolio
+          .</label>
+          <i class="fa fa-bars" id="icon" onclick="
+          Nav();
+          "></i>
+          <i class="fa fa-close" id="icon2" onclick="
+            Close();
+          "></i>
         <!--Navbar-->
         <nav class="nav-bar">
-          <ul> 
+          <ul id="navigation"> 
             <li><a id="home">Home</a></li>
             <li><a onclick="Services()">Services</a></li>
             <li><a onclick="Pricing()">Packages</a></li>
@@ -458,7 +465,7 @@
         <div class="line"></div>
         <div id="packages">
           <div id="Basic">
-              <i class="fa fa-check-square-o" style="font-size:3rem;"></i>
+              <i class="fa fa-check-square-o"></i>
             <h2>Basic</h2>
             <p class="underline"></p>
             <h3>Website DESIGNN for small/medium companies</h3>
@@ -489,11 +496,11 @@
                   <span>E-commerce Setup</span>
                 </li>
                 <hr>
-                <p style="color:black; margin-left: 3vw;margin-top: 1vw;font-size: 1.2rem;">Price: R1200</p>
+                <p>Price: R1200</p>
               </ul>
           </div>
           <div id="Premium">
-              <i class="fa fa-check-square-o" style="font-size:3rem;"></i>
+              <i class="fa fa-check-square-o" ></i>
             <h2>Premium</h2>
             <p class="underline"></p>
             <h3>Website DESIGNN for small/medium companies</h3>
@@ -524,12 +531,11 @@
                 <span>E-commerce Setup</span>
               </li>
               <hr>
-                <p style="color:black; margin-left: 3vw;margin-top: 1vw;font-size: 1.2rem;">Price: R1200</p>
                 <p >Price: R2200</p>
             </ul>
           </div>
           <div id="Ultimate">
-              <i class="fa fa-check-square-o" style="font-size:3rem;"></i>
+              <i class="fa fa-check-square-o"></i>
             <h2>Ultimate</h2>
             <h3 class="underline"></h3> 
             <h3>Website DESIGNN for small/medium companies</h3>
@@ -560,7 +566,7 @@
                   <span>E-commerce Setup</span>
                 </li>
                 <hr>
-                <p style="color:white; margin-left: 3vw;margin-top: 1vw;font-size: 1.2rem;">Price: R4200</p>
+                <p>Price: R4200</p>
               </ul>
           </div>
         </div>
