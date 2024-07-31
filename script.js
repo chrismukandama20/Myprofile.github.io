@@ -278,9 +278,30 @@ let x =document.querySelector('#project');
     console.log(increement2);
   }
 
-;
 
   function headerScroll(){
     let tophearder = document.getElementById('Top-bar') ;
     tophearder.style.borderBottom = 'solid 1px';
   }
+
+  function Nav(){
+    let navbar = document.getElementById("navigation");
+    let icon = document.getElementById("icon");
+    let icon2 = document.getElementById("icon2");
+    navbar.style.left = "0";
+    icon.style.display = "none";
+    icon2.style.display = "block";
+    
+  }
+  function Close(){
+    let navbar = document.getElementById("navigation");
+    let icon = document.getElementById("icon");
+    let icon2 = document.getElementById("icon2");
+    navbar.style.left = "-390px";
+    icon.style.display = "block";
+    icon2.style.display = "none";
+  }
+
+  (function(){
+    document.addEventListener('scroll', console.log('hi'))
+  })()

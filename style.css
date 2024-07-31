@@ -29,7 +29,7 @@
   /*Navigation bar*/
   header #Top-bar{
     padding-top: 2vw;
-    position: sticky;
+    position: fixed;
     top:0;
     left: 0;
     background: #081b29;
@@ -64,6 +64,7 @@
     font-size: 1rem;
     cursor: pointer;
   }
+  
   header .nav-bar ul li a:hover{
     border-color:#22a0fe;
     font-size: 1.1rem;
@@ -84,10 +85,10 @@
   }
   /*Banner-Headings*/
   header .banner .Top-headings{
-    padding-top: 38vw;
+    padding-top: 40vw;
     margin-left: 8vw;
     line-height: 3vw;
-
+   
   }
   header .banner .Top-headings h2{
     font-size: 2rem;
@@ -137,6 +138,7 @@
     box-shadow: #22a0fe 2px 3px 9px;
     margin-top: 1vw;
     font-size: 0.8rem;
+    
   }
   main{
 
@@ -145,7 +147,7 @@
   main #section1 .about-me{
     padding-top: 13vw;
     margin-left: 50vw;
-    
+    z-index:-3;
   }
     main #section1 .about-me h2{
       font-size: 2.4rem;
@@ -466,7 +468,6 @@
     top:0;
     margin-left:0;
     margin-top:0;
-    width:100%;
     height:100%;
     background: rgba(0, 0, 0, 0.712);
     
@@ -482,30 +483,31 @@
     left:3vw;
   }
   #projects #project-columns #project div .description p{
+    width:100%;
     margin-top: 30%;
     width: 30vw;
     font-weight: lighter;
     margin-left: 3vw;
     font-size: 1vw;
   }
-  #projects #project-columns button{
-    position: absolute;
+  #projects  button{
+    position: relative;
     color:whitesmoke;
     left:2vw;
     padding:5vw 0.3vw;
-    top:16vw;
+    top:-24vw;
     background: transparent;
     border: none;
     cursor: pointer;
     z-index: 20;
     transition: all 300ms;
   }
-  #projects #project-columns button:hover{
+  #projects  button:hover{
     box-shadow: 1px 1px 20px #012290f7 ,1px 1px 40px #04080ef7;
     border: solid;
   }
-  #projects #project-columns #Btn{
-    left:90vw;
+  #projects #Btn{
+    left:84vw;
   }
   #projects #project-columns #Btn2{
     opacity:0.5;
@@ -515,7 +517,7 @@
     background: url(WEB1.png);
     background-position: center;
     background-size: cover;
-
+    
   }
   #projects #project-columns #project #project2{
     background: url(WEB2.png);
@@ -995,21 +997,34 @@
   
   @media screen and (max-width:1000px){
     main{
-      overflow: hidden;
+      
+      overflow:hidden;
+      width:100%;
+    }
+    header .banner{
+      overflow:hidden;
+      height:90vw;
+      z-index: 40;
+    }
+    header .banner .Top-headings .social-media-icons{
+      
     }
     #icon{
       display:block ;
       float:right;
-      font-size: 3rem;
+      font-size: 6vw;
       margin-right: 40px;
       opacity: 1;
+      z-index: 60;
     }
     #icon2{
       float:right;
       display: none;
-      font-size: 3rem;
+      font-size: 6vw;
       margin-right:40px ;
       opacity: 1;
+      position: fixed;
+      z-index: 60;
     }
      /*Navigation bar*/
     header #Top-bar nav ul{
@@ -1028,22 +1043,42 @@
     header .banner{
       background-size: contain;
       height: ;
+      position: relative;
+      top:0;
+      width:100%;
+      overflow:;
     }
-    
+    header .banner .Top-headings{
+      position: relative;
+      top:3vw;
+    }
+    header .banner .Top-headings h2{
+      font-size:4vw;
+    }
+    header .banner .Top-headings h3{
+      font-size:3vw;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
     header .banner .Top-headings p{
      position: relative;
-     
+     font-size:2.2vw;
+     width:60vw;
       margin-top:30px;
     }
     header .banner .social-media-icons{
-      margin-top:30px;
+      
     }
     header .banner .about-me-button{
+      margin-top:30px;
       position: relative;
-     top:10px;
+     font-size: 2vw;
+      top:6vw;
     }
     main #section1 {
       text-align: center;
+      overflow:hidden;
+      width:100%;
     }
     main #section1 .about-me{
       margin-left: 0;
@@ -1051,19 +1086,30 @@
     main #section1 .about-me p{
       position: relative;
       left:10vw;
-      font-size: 20px;
+      font-size: 3vw;
       width:80vw;
       line-height: 40px;
     }
     main #section1 .about-me button{
       padding:15px 49px;
-      font-size: 1.4rem;
-      margin-top: 0;
+      font-size: 3vw;
     }
     /*Services we provide*/
- 
+    main #services{
+      overflow:hidden;
+      width:100%;
+    }
+    main #services .services-heading{
+      font-size: 13vw;
+      
+    }
+    main #services .sub-heading{
+      font-size: 10vw;
+      margin-top:-6vw;      
+    }
     main #services li{
       display: block;
+     
       width:60vw;
       position: relative;
       left:15vw;
@@ -1073,7 +1119,7 @@
       font-size: 4vw;
     }
     main #services i{
-      font-size: 3.8rem;
+      font-size: 3.8rem;      
     }
     main #services li p{
       font-size: 2vw;
@@ -1082,9 +1128,22 @@
 
     }
     main #services li button{
-      padding:12px 16px;
-      font-size: 1.6rem;
+      padding:1vw 2vw;
+      font-size: 3vw;
     }
+    main #Strengths{
+      overflow:hidden;
+      width:100%;
+    }
+    main #Strengths h2{
+      font-size: 10vw;
+      margin-right: 10%;
+    }
+    main #Strengths h3{
+      font-size: 8vw;
+      margin-right: 10%;
+    }
+
     main #Strengths #skills{
       position: relative;
       left:10vw;
@@ -1097,18 +1156,23 @@
       height:0.6vw;
     }
     main #Strengths #skills div::After{
-      font-size: 1rem;
+      font-size: 3vw;
       border-radius: 1.6vw;
       padding:0.16vw 0.16vw;
     }
     #projects{
-      top:-30vw;
+      top:-200px;
+      width:100%;
+      overflow: ;
     }
     #projects h2{
-      font-size: 1.8rem;
+      font-size: 5vw;
+      width:80%;
+      line-height: 10vw;
     }
     #projects #project-columns{
       height: 60vw;
+      overflow: scroll;
     }
     #projects #project-columns #project div{
       height: 48vw;
@@ -1117,17 +1181,44 @@
     #projects #project-columns #project div .description h4{
       font-size:3.6vw;
     }
+    #projects  button{
+      top:-40vw;
+      display:none;
+    }
+    #projects  button i{
+      font-size: 5vw;
+    }
     #projects #project-columns #project div .description p{
-      width: 60%;
-      font-size: 2vw;
+      width: 65%;
+      font-size: 2.1vw;
+    }
+    main #web-inspirations{
+      margin-top: -20vw;
+      width: 100%;
+    
+    }
+    main #web-inspirations #inspirations{
+      overflow: hidden;
+      
+    }
+    main #web-inspirations #inspirations #E-commerce{
+      animation-play-state: paused;
+      overflow: scroll;
+    }
+    main #web-inspirations #inspirations #Regular-site{
+      animation: none;
+      overflow:scroll ;
+    }
+    main #web-inspirations i{
+      display: none;
     }
     main #web-inspirations .heading{
-      font-size:2rem;
-      width:60vw;
-      line-height: 8vw;
+      font-size: 5vw;
+      width:80%;
+      line-height: 10vw;
     }
     main #web-inspirations .definition{
-      font-size: 1.1rem;
+      font-size: 3vw;
       line-height: 5vw;
       width:70vw;
     }
@@ -1139,11 +1230,21 @@
       height: 35vw;
     }
     main #web-inspirations #inspirations p{
-      font-size: 2.2vw;
+      font-size: 2.5vw;
       line-height: 3.6vw;
     }
+    main #web-inspirations #inspirations a{
+      
+    }
+    main #web-inspirations #heading{
+      font-size: 8vw;
+    }
+    main #pricing{
+      width: 100%;
+      overflow: hidden;
+    }
     main #pricing h2{
-      font-size:2rem;
+      font-size:4vw;
       width:80vw;
       line-height: 8vw;
     }
@@ -1172,12 +1273,14 @@
       margin-left: 30%;
     }
     main #pricing #packages div button{
-      margin-left:24.8vw;
+      margin-left:24vw;
       padding:1.4vw 2vw;
       border-radius:0.8vw;
+      font-size: 2vw;
     }
     main #pricing #packages div button .fa-phone{
       margin-left: 0.4vw;
+      font-size: 3vw;
     }
     main #pricing #packages ul{
       margin-top:6vw;
@@ -1201,6 +1304,8 @@
     }
     main #trust-us{
       height:70vw;
+      width: 100%;
+      overflow: hidden;
       margin-top: 10vw;
     }
     main #trust-us .info h2{
@@ -1220,13 +1325,19 @@
       font-size:8vw;
       margin-top: 4vw;
     }
+    main #short-course{
+      width:100%;
+      overflow:;
+    }
     main #short-course h2{
-      font-size: 2rem;
-      width:50vw;
-      line-height:6vw;
+      font-size: 5vw;
+      width:70vw;
+      line-height:8vw;
     }
     main #short-course p{
       line-height: 5vw;
+      font-size:3vw;
+      width:70%;
     }
     main #short-course #youtube{
       width:70vw;
@@ -1235,24 +1346,36 @@
     footer #form  h2{
       font-size:;
     }
+    footer{
+      width: 100%;
+      overflow: hidden;
+    }
     footer #form div{
       position: relative;
       right:10vw;
     }
-    footer #form input{
-      width:50vw;
+    footer #form #name input{
+      width:53vw;
       height: 4.4vw;
+      padding:3.2vw 0; 
+    }
+    footer #form #email input{
+      width:53vw;
+      height: 4.4vw;
+      padding:3.2vw 0; 
     }
     footer #form #message input{
-      padding-bottom: 20vw;
       
+      width:53vw;
+      height: 4.4vw;
+      padding:1vw 0;
+      padding-bottom: 20vw;
     }
     footer #form .social-media-icons{
-      
       margin-left: 66vw;
     }
     footer #form .social-media-icons a{
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     footer #form button{
       width:50vw;
@@ -1261,6 +1384,37 @@
       font-size: 3vw;
     }
     footer .top p{
-      font-size: 1.1rem;
+      font-size: 2.1vw;
+
+    }
+  }
+  @media screen and (max-width:840px){
+    header .banner{
+      overflow:hidden;
+      height:110vw;
+    }
+    main #services{
+      margin-top:20vw;
+    }
+    main #Strengths{
+      margin-top:20vw;
+    }
+    main #projects{
+      margin-top:-30vw;
+    }
+    footer .top p{
+      font-size: 3.1vw;
+
+    }
+
+  }
+  @media screen and (max-width:500px){
+    header .banner{
+      overflow:hidden;
+      height:130vw;
+    }
+    footer #form .social-media-icons{
+      position: relative;
+      right:15vw;
     }
   }
