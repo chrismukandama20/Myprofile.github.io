@@ -123,7 +123,10 @@ let x =document.querySelector('#project');
       let element = document.querySelector('.top');
       element.scrollIntoView({behavior: 'smooth'});
     }
-     
+     function projects(){
+      let element = document.querySelector('#project-columns');
+      element.scrollIntoView({behavior: 'smooth'});
+    }
      function forwards(){
       let x = document.getElementById('E-commerce');
       
